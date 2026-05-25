@@ -31,12 +31,12 @@ export default function Home() {
           Crafting clean, thoughtful interfaces for brands and products that want to stand out.
         </p>
         <div className="mt-10 flex gap-4">
-          <Button size="lg" asChild>
-            <a href="#work">View My Work</a>
-          </Button>
-          <Button variant="outline" size="lg" asChild>
-            <a href="#contact">Get in Touch</a>
-          </Button>
+          <a href="#work">
+            <Button size="lg">View My Work</Button>
+          </a>
+          <a href="#contact">
+            <Button variant="outline" size="lg">Get in Touch</Button>
+          </a>
         </div>
       </section>
 
@@ -81,9 +81,9 @@ export default function Home() {
         <p className="text-muted-foreground mb-8">
           Have a project in mind? I&apos;d love to hear about it.
         </p>
-        <Button size="lg" asChild>
-          <a href="mailto:shubham@example.com">Say Hello →</a>
-        </Button>
+        <a href="mailto:shubham@example.com">
+          <Button size="lg">Say Hello →</Button>
+        </a>
       </section>
 
       {/* Footer */}
