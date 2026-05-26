@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-sage: #B9CDBE;
+  --color-sage-light: #d4e3d8;
+  --color-sage-dark: #8fa896;
+  --color-lavender: #756187;
+  --color-lavender-light: #9b8aab;
+  --color-lavender-dark: #5a4a68;
+  --color-mint: #57A999;
+  --color-mint-light: #7ec4b7;
+  --color-mint-dark: #3d8a7c;
+  --color-orange: #F69A4A;
+  --color-orange-light: #f8b574;
+  --color-orange-dark: #e07d2a;
+  --color-ocean: #003F54;
+  --color-ocean-light: #1a6680;
+  --color-ocean-dark: #002a38;
+  --color-surface: #ECECEC;
+  --color-surface-light: #F8F8F8;
+  --color-surface-dark: #DEDEDE;
+
+  --font-sans: "Inter Tight", "Geist", system-ui, sans-serif;
+  --font-heading: "Satoshi", "Geist", system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-surface-dark;
+  }
+
+  html {
+    @apply antialiased scroll-smooth;
+  }
+
+  body {
+    @apply bg-surface-light text-ocean font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: #B9CDBE;
+    color: #003F54;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .glow-sage {
+    box-shadow: 0 0 40px rgba(185, 205, 190, 0.4);
+  }
+
+  .glow-mint {
+    box-shadow: 0 0 40px rgba(87, 169, 153, 0.3);
+  }
+
+  .glow-lavender {
+    box-shadow: 0 0 40px rgba(117, 97, 135, 0.3);
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 40px rgba(246, 154, 74, 0.3);
+  }
+
+  .shadow-calm {
+    box-shadow: 0 8px 40px rgba(0, 63, 84, 0.06), 0 2px 12px rgba(0, 63, 84, 0.04);
+  }
+
+  .shadow-elevated {
+    box-shadow: 0 20px 60px rgba(0, 63, 84, 0.08), 0 4px 20px rgba(0, 63, 84, 0.04);
+  }
+
+  .gradient-calm {
+    background: linear-gradient(135deg, #B9CDBE 0%, #57A999 100%);
+  }
+
+  .gradient-emotional {
+    background: linear-gradient(135deg, #756187 0%, #003F54 100%);
+  }
+
+  .gradient-warmth {
+    background: linear-gradient(135deg, #F69A4A 0%, #756187 100%);
+  }
+
+  .gradient-ambient {
+    background: linear-gradient(180deg, #F8F8F8 0%, #d4e3d8 50%, #B9CDBE 100%);
+  }
+}
